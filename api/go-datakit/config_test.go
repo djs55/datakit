@@ -1,16 +1,11 @@
 package datakit
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"testing"
-
-	"golang.org/x/net/context"
 )
-
-func dial(ctx context.Context) (*Client, error) {
-	return Dial(ctx, "unix", "/var/tmp/foo")
-}
 
 func TestConfig(t *testing.T) {
 	ctx := context.Background()
